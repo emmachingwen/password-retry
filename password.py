@@ -1,17 +1,13 @@
-support = input('今天有沒有人去支援?')
+password = 'a123456'
 
-if support =='沒有':
-	print('太讚啦!')
-
-elif support =='有':
-	number = input('去幾位?')
-	number = int(number)
-	if number >= 2:
-		print('今日人力緊缺')
-	elif number == 1:
-		print('還撐得下去')
-	elif number == 0:
-		print('太讚啦!')
-else:
-	print('只能輸入有/沒有')
-
+i = 3
+while True:
+	pwd= input('請輸入密碼:')
+	if pwd == password:
+		print('登入成功!')
+		break #逃出迴圈
+	else:
+		i = i - 1
+		print('密碼錯誤!還有', i, '次機會')
+		if i == 0:
+			break
